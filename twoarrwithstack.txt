@@ -1,0 +1,75 @@
+class stacktwoarr
+{
+    int top, top1;
+    static int c=8;
+    int a[];
+    stacktwoarr()
+    {
+        
+ top=-1;        
+ top1=c;
+ a = new int[c];    
+ }
+    public void push(int b) 
+    { 
+        if(top<(top1-1)) 
+        { 
+            a[++top] = x; 
+            System.out.println(b+"is pushed in stack 1");  
+        } 
+        else 
+        { 
+            System.out.println("it is overflow"); 
+        } 
+    } 
+    public void push1(int x) 
+    { 
+        if (top<(top1-1)) 
+        { 
+            a[--top1] = b; 
+            System.out.println(x+"is pushed in stack 2"); 
+        } 
+        else 
+        { 
+            System.out.println("it is overflow!");  
+        } 
+    } 
+    public void pop()
+    {
+        if (top >= 0) 
+        { 
+            int b = a[top--]; 
+            System.out.println(b+"is removed from stack 1");
+        } 
+        else {  
+            System.out.println("stack 1 underflow");
+        } 
+    }
+    public void pop1()
+    {
+        if (top1 < n) 
+        { 
+            int b = a[top1++]; 
+            System.out.println(b+"is removed from stack 2");
+        } 
+        else
+        {  
+             System.out.println(" stack 2 is underflow ");
+        } 
+    }
+
+public static void main(String args[])
+{
+    
+    stacktwoarr s=new stacktwoarray();
+        s.push1(1); 
+        s.push2(11); 
+        s.push2(5); 
+        s.push1(3); 
+        s.push2(4); 
+        s.pop1();
+        s.pop1();
+        s.pop1();
+        
+}
+}

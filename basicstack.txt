@@ -1,0 +1,77 @@
+import java.util.*;
+class stack
+{   
+    int top;
+    static int b=4;
+    int a[];
+    stack()
+    {
+        top=-1;
+        a = new int[b];    
+    }
+    
+    public void pushto(int c) 
+    { 
+        if (top>=(b-1)) 
+        { 
+            System.out.println("stack is overflow"); 
+        } 
+        else 
+        { 
+            a[++top] =c; 
+            System.out.println(c+" is pushed in stack");  
+        } 
+    } 
+    public void pop()
+    {
+        if (top<0) 
+        { 
+            System.out.println("stack is Underflow");
+        } 
+        else { 
+            int c = a[top--]; 
+            System.out.println(c+"is removed"); 
+        } 
+    }
+    public void peek()
+    {   
+        if (top < 0) 
+        { 
+            System.out.println("stack is underflow"); 
+        } 
+        else 
+        { 
+              System.out.println(a[top]+" it is at peek");       
+        } 
+    }
+
+public static void main(String args[])
+{
+    Scanner sc =new Scanner(System.in);
+    stack s=new stack();
+    for(int i=0;i<b;i++)
+    {
+        int u=integer.parseInt(sc.nextLine());
+        s.push(u);
+    }
+    int k=1;
+    System.out.println("Enter pop element, peek element or exit element:");
+    while(k!=0)
+    {String l= sc.nextLine();
+    if(l.equals("pop"))
+    {
+        s.pop();
+    }
+    if(l.equals("peek"))
+    {
+        s.peek();
+    }
+    if(l.equals("exit"))
+    {
+        k=0;
+    }
+    }
+    sc.close();
+}
+
+}
